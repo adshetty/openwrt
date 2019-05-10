@@ -371,6 +371,10 @@ LIBGCC_SO=$(lastword $(wildcard $(TOOLCHAIN_DIR)/lib/libgcc_s.so.*))
 
 define Build/Compile/uClibc
 	$(CP) \
+		/home/anil/toolchain/armeb-buildroot-linux-uclibcgnueabi_sdk-buildroot-gcc83/armeb-buildroot-linux-uclibcgnueabi/sysroot/lib \
+		$(TOOLCHAIN_DIR)/ 
+
+	$(CP) \
 		$(TOOLCHAIN_DIR)/lib/libuClibc-*.so \
 		$(PKG_BUILD_DIR)/
 endef

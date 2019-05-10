@@ -511,7 +511,7 @@ CONFIGURE_ARGS += \
 	--disable-more			\
 	--with-ncursesw
 
-TARGET_CFLAGS += $(FPIC) -std=gnu99
+TARGET_CFLAGS += $(FPIC) -std=gnu99 -Wno-error=format-security
 
 define Build/InstallDev
 	$(INSTALL_DIR) $(1)/usr/lib/pkgconfig
